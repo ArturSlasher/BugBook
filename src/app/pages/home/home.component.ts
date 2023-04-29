@@ -3,6 +3,7 @@ import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, OnDestroy} from '@angular/core';
 import { BugbookService } from 'src/app/services/bugbook.service';
 import { Book } from 'src/app/interfaces/book.interface';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-home',
@@ -33,5 +34,9 @@ export class HomeComponent {
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.Books$.value, event.previousIndex, event.currentIndex);
   }
 }
