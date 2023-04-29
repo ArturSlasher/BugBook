@@ -37,16 +37,6 @@ h1.app-name {
   cursor: pointer;
 }
 
-.button-menu {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-
-  & .icon-menu {
-    color: white;
-  }
-}
-
 .content {
   padding: 2rem;
   white-space: pre-wrap;
@@ -54,4 +44,15 @@ h1.app-name {
   & p {
     margin-bottom: 2rem;
   }
+}
+
+.add-book-button {
+  position: fixed !important;
+  z-index: 3;
+  top: 85vh;
+  right: 5vw;
+}
+
+.add-book-icon {
+  color: white;
 }

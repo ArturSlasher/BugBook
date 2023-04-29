@@ -1,0 +1,29 @@
+@import '/src/styles.scss';
+
+.add-book-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: center;
+  width: 80vw;
+  padding: 8px;
+}
+
+.title-input {
+  width: 100%;
+}
+
+.content-input {
+  width: 100%;
+}
+
+textarea {
+  height: 25vh;
+}
+
+.save-button {
+  width: 16vw;
+  height: 40px;
+  color: white;
+}
